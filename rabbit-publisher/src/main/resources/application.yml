@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: rabbit-publisher
+  rabbitmq:
+    host: localhost
+    port: 5672
+
+queues:
+  oak: pallet-town
+  
+exchanges:
+  fanout: pokeMart
+  
+server:
+  port: 8456

@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:devdb
+  sql:
+    init:
+      platform: h2
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server:
+  port: 9311
+  
+logging:
+  level:
+    '[com.skillstorm]': debug
+    root: info
+  
+#strongly recommended not to enable all of them
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+#We'll come back to this  
+skillstorm:
+  classroom:
+    champion:
+      name: Marcie
+      times: 10
+    first-loser: Dan Pickles
+    mascot: Wombat
+    fav-trainer: Sean
+    
+
+    
